@@ -17,7 +17,7 @@ blocks:
       - name: Docker build
         commands:
           # Authenticate with Docker Hub
-          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
           - checkout
           - docker-compose build
           - docker tag pyflasksemaphore:latest "$DOCKER_USERNAME"/pyflasksemaphore:latest
