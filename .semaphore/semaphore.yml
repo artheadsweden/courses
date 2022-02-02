@@ -15,7 +15,7 @@ blocks:
         - name: pyflask-semaphore
       jobs:
       - name: Docker build
-        commands:
+        commands: 
           # Authenticate with Docker Hub
           - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
           - checkout
